@@ -43,7 +43,14 @@
 
   </div>
   <a href="contact.html" class="cta-nav">Start a Project</a>
-</nav>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="portfolio.html">Portfolio</a>
+  <a href="studio.html">Studio</a>
+  <a href="process.html">Process</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="contact.html" class="mob-cta">Start a Project</a>
+</div>
 
 <header class="hero-sm">
   <div class="eyebrow">The Process · Day 1 to Day 4</div>
@@ -226,5 +233,6 @@
   <div class="foot-bottom"><div>© 2026 NearBlack.</div><div>A shade shy of black.</div></div>
 </footer>
 
+<script>const navToggle=document.querySelector(".nav-toggle");const mobileMenu=document.getElementById("mobileMenu");navToggle.addEventListener("click",()=>{navToggle.classList.toggle("open");mobileMenu.classList.toggle("open");navToggle.setAttribute("aria-expanded",mobileMenu.classList.contains("open"));document.body.style.overflow=mobileMenu.classList.contains("open")?"hidden":"";});document.querySelectorAll(".mobile-menu a").forEach(a=>a.addEventListener("click",()=>{navToggle.classList.remove("open");mobileMenu.classList.remove("open");document.body.style.overflow="";}));</script>
 </body>
 </html>
