@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="NearBlack">
+  <title>NearBlack</title>
+  <!-- rounded square background · near black, not pure black -->
+  <rect width="512" height="512" rx="96" ry="96" fill="#0a0a0a"/>
+  <!-- subtle inner border · echoes 'a shade shy of black' -->
+  <rect x="3" y="3" width="506" height="506" rx="93" ry="93" fill="none" stroke="#f6f3ec" stroke-opacity="0.06" stroke-width="2"/>
+  <!-- geometric N monogram in brand cream -->
+  <g fill="#f6f3ec">
+    <rect x="128" y="128" width="60" height="256" rx="3"/>
+    <rect x="324" y="128" width="60" height="256" rx="3"/>
+    <polygon points="188,128 248,128 384,384 324,384"/>
+  </g>
+  <!-- NearBlack signature midpoint · the 'shy' accent -->
+  <circle cx="426" cy="86" r="12" fill="#f6f3ec"/>
+</svg>

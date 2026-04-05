@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://nearblack.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://nearblack.com/portfolio.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://nearblack.com/studio.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://nearblack.com/process.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://nearblack.com/pricing.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://nearblack.com/contact.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://nearblack.com/quench.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://nearblack.com/case-study.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://nearblack.com/terms.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+</urlset>

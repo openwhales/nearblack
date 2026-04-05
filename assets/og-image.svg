@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#000"/>
+  <rect x="1" y="1" width="1198" height="628" fill="none" stroke="#222" stroke-width="1"/>
+  <!-- icon mini -->
+  <rect x="80" y="72" width="72" height="72" rx="16" fill="#0a0a0a" stroke="#f6f3ec" stroke-opacity="0.15" stroke-width="1.5"/>
+  <text x="116" y="122" text-anchor="middle" fill="#f6f3ec" font-family="Helvetica Neue,Arial,sans-serif" font-size="40" font-weight="700">N</text>
+  <circle cx="148" cy="80" r="5" fill="#f6f3ec"/>
+  <!-- brand wordmark -->
+  <text x="80" y="340" fill="#f6f3ec" font-family="Helvetica Neue,Arial,sans-serif" font-size="88" font-weight="800" letter-spacing="-2.5">Near<tspan fill="#999" font-weight="400">Black</tspan></text>
+  <!-- tagline -->
+  <text x="80" y="410" fill="#888" font-family="Helvetica Neue,Arial,sans-serif" font-size="28" font-weight="500" letter-spacing="-0.3">Refreshes for the websites that already deserve better.</text>
+  <!-- stats bar -->
+  <text x="80" y="540" fill="#555" font-family="Helvetica Neue,Arial,sans-serif" font-size="18" font-weight="500" letter-spacing="3">72HR DELIVERY</text>
+  <text x="360" y="540" fill="#333" font-family="Helvetica Neue,Arial,sans-serif" font-size="18" font-weight="500">|</text>
+  <text x="400" y="540" fill="#555" font-family="Helvetica Neue,Arial,sans-serif" font-size="18" font-weight="500" letter-spacing="3">FROM $1,000</text>
+  <text x="640" y="540" fill="#333" font-family="Helvetica Neue,Arial,sans-serif" font-size="18" font-weight="500">|</text>
+  <text x="680" y="540" fill="#555" font-family="Helvetica Neue,Arial,sans-serif" font-size="18" font-weight="500" letter-spacing="3">NO DEPOSIT</text>
+  <text x="920" y="540" fill="#333" font-family="Helvetica Neue,Arial,sans-serif" font-size="18" font-weight="500">|</text>
+  <text x="960" y="540" fill="#555" font-family="Helvetica Neue,Arial,sans-serif" font-size="18" font-weight="500" letter-spacing="3">PAY ON LAUNCH</text>
+</svg>
