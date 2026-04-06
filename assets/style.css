@@ -109,7 +109,7 @@ section{padding:140px 32px;border-bottom:1px solid var(--line);position:relative
 .project-tile,.project-img{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--bg-2);border:1px solid var(--line)}
 .project.wide .project-tile,.project.wide .project-img{aspect-ratio:21/9}
 .project.tall .project-tile,.project.tall .project-img{aspect-ratio:3/4}
-.project-tile img,.project-img img{width:100%;height:100%;object-fit:contain;object-position:top center;transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s}
+.project-tile img,.project-img img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s}
 .project:hover .project-tile img,.project:hover .project-img img{transform:scale(1.04)}
 .project-meta{display:grid;grid-template-columns:1fr 2fr;gap:48px;margin-top:20px;align-items:flex-start}
 .project-meta>div:first-child{display:flex;flex-direction:column;gap:6px}
