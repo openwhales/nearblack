@@ -30,6 +30,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
+<script defer data-domain="nearblack.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
 
@@ -90,21 +91,22 @@
         <input id="business" type="text" placeholder="Koa Floral">
       </div>
       <div class="form-field">
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="elena@koafloral.com">
+        <label for="email">Email *</label>
+        <input id="email" type="email" placeholder="elena@koafloral.com" required>
+        <div class="form-error">Please enter a valid email address.</div>
       </div>
       <div class="form-field">
         <label for="url">Your Current Website *</label>
-        <input id="url" type="url" placeholder="koafloral.com" required>
+        <input id="url" type="text" placeholder="koafloral.com" required>
+        <div class="form-error">Please enter your website URL.</div>
       </div>
       <div class="form-field">
         <label for="engagement">Which engagement fits best?</label>
         <select id="engagement">
           <option>Not sure yet</option>
-          <option>The Starter · $1,000</option>
-          <option>The Growth · $2,500</option>
-          <option>The Scale · $4,000</option>
-          <option>The Signature · $5,000</option>
+          <option>The Starter · $2,500</option>
+          <option>The Growth · $4,500</option>
+          <option>The Scale · $7,000</option>
           <option>Something custom</option>
         </select>
       </div>
@@ -126,10 +128,12 @@
 <footer>
   <div><div class="foot-brand">Near<em>Black</em></div><p class="foot-tag">Refreshes for the websites that already deserve better.</p></div>
   <div><h4>Studio</h4><ul><li><a href="/studio">About</a></li><li><a href="/process">Process</a></li><li><a href="/portfolio">Portfolio</a></li></ul></div>
-  <div><h4>Engagements</h4><ul><li><a href="/pricing">Starter · $1K</a></li><li><a href="/pricing">Growth · $2.5K</a></li><li><a href="/pricing">Scale · $4K</a></li><li><a href="/pricing">Signature · $5K</a></li></ul></div><div><h4>Contact</h4><ul><li><a href="mailto:hello@nearblack.com">hello@nearblack.com</a></li><li><a href="/terms">Terms of Use</a></li></ul></div>
+  <div><h4>Engagements</h4><ul><li><a href="/pricing">Starter · $2.5K</a></li><li><a href="/pricing">Growth · $4.5K</a></li><li><a href="/pricing">Scale · $7K</a></li></ul></div><div><h4>Contact</h4><ul><li><a href="mailto:hello@nearblack.com">hello@nearblack.com</a></li><li><a href="/terms">Terms of Use</a></li><li><a href="/privacy">Privacy Policy</a></li></ul></div>
   <div class="foot-bottom"><div>© 2026 NearBlack.</div><div>A shade shy of black.</div></div>
 </footer>
 
-<script>const navToggle=document.querySelector(".nav-toggle");const mobileMenu=document.getElementById("mobileMenu");navToggle.addEventListener("click",()=>{navToggle.classList.toggle("open");mobileMenu.classList.toggle("open");navToggle.setAttribute("aria-expanded",mobileMenu.classList.contains("open"));document.body.style.overflow=mobileMenu.classList.contains("open")?"hidden":"";});document.querySelectorAll(".mobile-menu a").forEach(a=>a.addEventListener("click",()=>{navToggle.classList.remove("open");mobileMenu.classList.remove("open");document.body.style.overflow="";}));</script>
+<script>const navToggle=document.querySelector(".nav-toggle");const mobileMenu=document.getElementById("mobileMenu");navToggle.addEventListener("click",()=>{navToggle.classList.toggle("open");mobileMenu.classList.toggle("open");navToggle.setAttribute("aria-expanded",mobileMenu.classList.contains("open"));document.body.style.overflow=mobileMenu.classList.contains("open")?"hidden":"";});document.querySelectorAll(".mobile-menu a").forEach(a=>a.addEventListener("click",()=>{navToggle.classList.remove("open");mobileMenu.classList.remove("open");document.body.style.overflow="";}));
+document.querySelectorAll(".form-field input[required]").forEach(function(input){input.addEventListener("input",function(){this.closest(".form-field").classList.remove("error")})});
+document.querySelector("form").addEventListener("submit",async function(e){e.preventDefault();var valid=true;this.querySelectorAll(".form-field").forEach(function(f){f.classList.remove("error")});var emailEl=document.getElementById("email");var urlEl=document.getElementById("url");if(!emailEl.value.trim()||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value.trim())){emailEl.closest(".form-field").classList.add("error");valid=false}if(!urlEl.value.trim()){urlEl.closest(".form-field").classList.add("error");valid=false}if(!valid){return}const btn=this.querySelector(".form-submit");const orig=btn.textContent;btn.textContent="Sending…";btn.disabled=true;try{const res=await fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:document.getElementById("name").value,business:document.getElementById("business").value,email:emailEl.value,url:(function(v){v=v.trim();if(v&&!/^https?:\/\//i.test(v))v="https://"+v;return v})(urlEl.value),engagement:document.getElementById("engagement").value,message:document.getElementById("message").value})});if(res.ok){btn.textContent="Sent ✓";this.reset();setTimeout(()=>{btn.textContent=orig;btn.disabled=false},3000)}else{btn.textContent="Error — try again";btn.disabled=false;setTimeout(()=>{btn.textContent=orig},3000)}}catch(err){btn.textContent="Error — try again";btn.disabled=false;setTimeout(()=>{btn.textContent=orig},3000)}});</script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="author" content="NearBlack Studio">
+<meta name="theme-color" content="#0a0a0a">
+<title>Page Not Found · NearBlack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script defer data-domain="nearblack.com" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="brand">Near<em>Black</em></a>
+  <div class="navlinks">
+    <a href="/portfolio">Portfolio</a>
+    <a href="/studio">Studio</a>
+    <a href="/process">Process</a>
+    <a href="/pricing">Pricing</a>
+  </div>
+  <a href="/contact" class="cta-nav">Start a Project</a>
+<button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/portfolio">Portfolio</a>
+  <a href="/studio">Studio</a>
+  <a href="/process">Process</a>
+  <a href="/pricing">Pricing</a>
+  <a href="/contact" class="mob-cta">Start a Project</a>
+</div>
+
+<header class="hero-sm" style="min-height:60vh;display:flex;flex-direction:column;justify-content:center">
+  <div class="eyebrow">404 · Page Not Found</div>
+  <h1 class="display">Nothing here. <em>Yet.</em></h1>
+  <p class="lede">The page you're looking for doesn't exist or has been moved.</p>
+  <a href="/" class="cta-btn" style="margin-top:40px;align-self:flex-start">Back to Homepage →</a>
+</header>
+
+<footer>
+  <div><div class="foot-brand">Near<em>Black</em></div><p class="foot-tag">Refreshes for the websites that already deserve better.</p></div>
+  <div><h4>Studio</h4><ul><li><a href="/studio">About</a></li><li><a href="/process">Process</a></li><li><a href="/portfolio">Portfolio</a></li></ul></div>
+  <div><h4>Engagements</h4><ul><li><a href="/pricing">Starter · $2.5K</a></li><li><a href="/pricing">Growth · $4.5K</a></li><li><a href="/pricing">Scale · $7K</a></li></ul></div>
+  <div><h4>Contact</h4><ul><li><a href="mailto:hello@nearblack.com">hello@nearblack.com</a></li><li><a href="/terms">Terms of Use</a></li><li><a href="/privacy">Privacy Policy</a></li></ul></div>
+  <div class="foot-bottom"><div>© 2026 NearBlack.</div><div>A shade shy of black.</div></div>
+</footer>
+
+<script>const navToggle=document.querySelector(".nav-toggle");const mobileMenu=document.getElementById("mobileMenu");navToggle.addEventListener("click",()=>{navToggle.classList.toggle("open");mobileMenu.classList.toggle("open");navToggle.setAttribute("aria-expanded",mobileMenu.classList.contains("open"));document.body.style.overflow=mobileMenu.classList.contains("open")?"hidden":"";});document.querySelectorAll(".mobile-menu a").forEach(a=>a.addEventListener("click",()=>{navToggle.classList.remove("open");mobileMenu.classList.remove("open");document.body.style.overflow="";}));</script>
+</body>
+</html>

@@ -155,6 +155,7 @@ section{padding:140px 32px;border-bottom:1px solid var(--line);position:relative
 .addon-name{font-family:var(--display);font-size:18px;font-weight:500;letter-spacing:-.015em;line-height:1.1;color:var(--fg)}
 .addon-desc{font-size:13px;line-height:1.6;color:var(--mute-2)}
 .addon-price{font-family:var(--display);font-size:16px;font-weight:500;letter-spacing:-.015em;margin-top:auto;color:var(--fg)}
+.addon-badge{display:inline-block;font-family:var(--display);font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--bg);background:var(--fg);padding:4px 10px;border-radius:3px;margin-bottom:4px}
 
 /* —————————————————— QUOTE —————————————————— */
 .quote{padding:140px 32px;text-align:center;border-bottom:1px solid var(--line);background:var(--bg)}
@@ -230,6 +231,10 @@ section{padding:140px 32px;border-bottom:1px solid var(--line);position:relative
 .form-field input::placeholder,.form-field textarea::placeholder{color:var(--mute);font-weight:400}
 .form-submit{display:inline-block;margin-top:24px;padding:22px 48px;background:var(--fg);color:var(--bg);font-family:var(--display);font-size:13px;font-weight:500;letter-spacing:-.005em;text-transform:uppercase;border-radius:999px;transition:opacity .2s}
 .form-submit:hover{opacity:.85}
+.form-field.error{border-bottom-color:#c44}
+.form-field.error label{color:#c44}
+.form-error{font-family:var(--body);font-size:12px;color:#c44;margin-top:4px;display:none}
+.form-field.error .form-error{display:block}
 
 /* —————————————————— FINAL CTA —————————————————— */
 .final{padding:140px 32px;text-align:center;background:var(--bg);border-bottom:1px solid var(--line)}
